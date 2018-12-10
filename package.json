@@ -1,0 +1,29 @@
+{
+  "name": "achievement-hunter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start:dev": "webpack-dev-server --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mousetrap": "^1.6.0",
+    "css-loader": "^1.0.1",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "ts-loader": "^5.3.1",
+    "typescript": "^3.2.1",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.2",
+    "vue-property-decorator": "^7.2.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {}
+}
