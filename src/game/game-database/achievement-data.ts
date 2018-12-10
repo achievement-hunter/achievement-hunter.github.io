@@ -899,12 +899,21 @@ export default class AchievementData {
                     points: 25,
                     ...(function () {
                         let countdownPassed = false;
+                        let justPassed = false;
                         return {
-                            subscribe: () => Mousetrap.bind("9 8 7 6 5 4 3 2 1", () => countdownPassed = true),
+                            subscribe: () => Mousetrap.bind("9 8 7 6 5 4 3 2 1", () => {
+                                countdownPassed = true;
+                                justPassed = true;
+                            }),
                             unsubscribe: () => Mousetrap.unbind("9 8 7 6 5 4 3 2 1"),
                             events: {
                                 [GameEvent.KEY_UP]: () => {
-                                    countdownPassed = false;
+                                    if (justPassed) {
+                                        justPassed = false;
+                                    }
+                                    else {
+                                        countdownPassed = false;
+                                    }
                                 },
                                 [GameEvent.THE_BUTTON_CLICK]: () => {
                                     if (countdownPassed) {
@@ -982,15 +991,6 @@ function completeAchievement() {
 }
 
 function keyPressAchievement(keys: string|string[]) {
-    if (typeof keys === "string" && !keys.includes(" ")) {
-        return {
-            events: {
-                [GameEvent.KEY_UP]: (char: string) => {
-                    if (char === keys) completeAchievement();
-                }
-            }
-        }
-    }
     return {
         subscribe: (ach: AchievementInfo) => Mousetrap.bind(keys, () => ach.complete()),
         unsubscribe: () => Mousetrap.unbind(keys)

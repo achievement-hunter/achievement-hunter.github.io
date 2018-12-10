@@ -25,19 +25,7 @@ export default class Game {
         window.oncontextmenu = () => EventHub.dispatch(GameEvent.RIGHT_MOUSE_UP);
         window.onfocus = () => EventHub.dispatch(GameEvent.WINDOW_GAINED_FOCUS);
         window.onblur = () => EventHub.dispatch(GameEvent.WINDOW_LOST_FOCUS);
-        const mousetrapHandler = Mousetrap.prototype.handleKey;
-        Mousetrap.prototype.handleKey = function (char: string, modifiers: string[], e: KeyboardEvent) {
-            mousetrapHandler.bind(this)(char, modifiers, e);
-            let event: GameEvent;
-            if (e.type === "keyup") {
-                event = GameEvent.KEY_UP;
-            } else if (e.type === "keydown") {
-                event = GameEvent.KEY_DOWN;
-            } else {
-                return;
-            }
-            EventHub.dispatch(event, char, modifiers, e);
-        }
+        window.onkeyup = e => EventHub.dispatch(GameEvent.KEY_UP);
     }
 
     update(time: number) {
