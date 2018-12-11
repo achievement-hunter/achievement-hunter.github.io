@@ -20,7 +20,7 @@ export default class Game {
 
     setupWindowEvents() {
         window.onmousemove = e => EventHub.dispatch(GameEvent.MOUSE_MOVE, e);
-        window.onmousewheel = () => EventHub.dispatch(GameEvent.MOUSE_WHEEL);
+        window.onwheel = () => EventHub.dispatch(GameEvent.MOUSE_WHEEL);
         window.onmouseup = () => EventHub.dispatch(GameEvent.MOUSE_UP);
         window.oncontextmenu = () => EventHub.dispatch(GameEvent.RIGHT_MOUSE_UP);
         window.onfocus = () => EventHub.dispatch(GameEvent.WINDOW_GAINED_FOCUS);

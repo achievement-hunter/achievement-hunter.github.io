@@ -12,10 +12,3 @@ body {
   font-family: Arial, serif;
   font-size: 1.6rem;
 }
-
-.shield-icon {
-  content: url("assets/images/shield.png");
-  width: 0.8em;
-  height: 1em;
-  transform: translateX(0.2em) translateY(0.15em);
-}

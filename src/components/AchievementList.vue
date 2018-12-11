@@ -56,6 +56,7 @@
     flex-direction: column;
     width: 30rem;
     z-index: 1;
+    overflow: hidden;
   }
 
   .achievement-list__points {

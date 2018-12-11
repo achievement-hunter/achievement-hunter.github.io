@@ -536,9 +536,9 @@ export default class AchievementData {
                 {
                     id: 59,
                     name: "Just to suffer",
-                    hint: "Play for a day",
+                    hint: "Play for 3 hours",
                     points: 25,
-                    ...playTimeAchievement(60 * 24)
+                    ...playTimeAchievement(60 * 3)
                 },
                 {
                     id: 60,
