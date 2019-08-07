@@ -17,10 +17,10 @@
     "sass-loader": "^7.1.0",
     "ts-loader": "^5.3.1",
     "typescript": "^3.5.3",
-    "vue": "^2.5.17",
+    "vue": "^2.6.10",
     "vue-loader": "^15.4.2",
     "vue-property-decorator": "^7.2.0",
-    "vue-template-compiler": "^2.5.17",
+    "vue-template-compiler": "^2.6.10",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
