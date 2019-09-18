@@ -22,7 +22,7 @@
     "vue-property-decorator": "^8.2.2",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
+    "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {}
